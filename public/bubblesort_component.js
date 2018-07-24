@@ -59,7 +59,7 @@ class BubblesortComponent extends React.Component {
 
       if (i > array.length) i = 0;
 
-      if (array[i] && array[i + 1] && array[i] < array[i + 1]) {
+      if (array[i] !== undefined && array[i + 1] !== undefined && array[i] < array[i + 1]) {
         this.swap(array, i, i + 1);
         status = 'swapped';
       }
@@ -70,7 +70,7 @@ class BubblesortComponent extends React.Component {
 
       // check if array is fully sorted -- some performance impact here
       for (var j = 0; j < array.length; j++) {
-        if (array[j] && array[j + 1] && array[j] < array[j + 1]) {
+        if (array[j] !== undefined && array[j + 1] !== undefined && array[j] < array[j + 1]) {
           sorted = false;
           break;
         }
