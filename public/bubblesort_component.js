@@ -7,7 +7,6 @@ class BubblesortComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      liked: false, 
       items: [], 
       startIndex: 0, 
       status: 'Initialized', 
@@ -25,7 +24,7 @@ class BubblesortComponent extends React.Component {
       array[i] = array[j];
       array[j] = temp;
 
-      $ = jQuery;
+      var $ = jQuery;
 
       // animate corresponding bars
       $('.bar-'+ i).animate({opacity: 0.25}, 400, 'swing', function() {
